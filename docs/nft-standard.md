@@ -20,7 +20,7 @@ update_authority|string| public key of the metadata owner | shown in the single 
 primary_sale_happened|boolean| flag describing whether the primary sale of the token happened | visible in the send NFT modal, can be updated
 seller_fee_basis_points|number| royalties percentage awarded to creators | shown as a percentage received by each co-creator
 
-The program also specifies optional structs used for the creation `Master Editions` and `Editions`. If these accounts exist, your wallet should display the Edition number (in case of a unique edition token) and whether a token is a `Master Edition`.
+The program also specifies optional structs used for the creation of `Master Editions` and `Editions`. If these accounts exist, your wallet should display the Edition number (in case of a unique edition token) and whether a token is a `Master Edition`.
 
 !!! info
 	You can explore the metadata standard in more detail on the [Metaplex project page](https://github.com/metaplex-foundation/metaplex) and in their developer guide.
@@ -28,7 +28,7 @@ The program also specifies optional structs used for the creation `Master Editio
 ## URI JSON Schema
 To display off-chain metadata of SPL tokens, the on-chain struct needs to contain a URI as described above, which will allow your wallet to find it.
 
-Your wallet should be using the JSON standard as described in the Metaplex Developer Guide. You should also also supports additional optional fields, such as the `attributes` field, as described in the OpenSea NFT Standard.
+Your wallet should be using the JSON standard as described in the Metaplex Developer Guide. You should also support additional optional fields, such as the `attributes` field, as described in the OpenSea NFT Standard.
 
 The file below should be used as a reference.
 
@@ -119,7 +119,7 @@ If you wish to provide additional hosting for your files to provide users a bett
 	]
 }
 ```
-If such a flag exists, that file is the primary option when selecting the multimedia-attachment (video, audio or 3D) that will be displayed to owners. If that file is no longer available, you wallet should default to it using the URL in `animation_url` field.
+If such a flag exists, that file is the primary option when selecting the multimedia-attachment (video, audio or 3D) that will be displayed to owners. If that file is no longer available, your wallet should default to it using the URL in `animation_url` field.
 
 #### Collections
 If the NFT belongs to a group of other unique NFTs, you can mark them with an additional `collection` field that contains the name of the collection. 
@@ -143,7 +143,7 @@ Some of them are:
 The only mandatory fields to describe an attribute are: `trait_type` and `trait_value`.
 
 #### Order of JSON fields
-Since you wallet will give users a direct link to the JSON file, it is recommended to keep the order of fields same as in the reference, so as to maintain good human readability of its contents.
+Since your wallet will give users a direct link to the JSON file, it is recommended to keep the order of fields same as in the reference, so as to maintain good human readability of its contents.
 
 #### Other arbitrary data
 We suggest using the properties field to store other arbitrary data that will be used by specialized applications.
